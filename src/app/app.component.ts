@@ -5,12 +5,13 @@ import Swal from 'sweetalert2';
 import {TableComponent} from "./table/table.component";
 import {NavbarComponent} from "./navbar/navbar.component";
 import {initFlowbite} from "flowbite";
+import {LoginComponent} from "./login/login.component";
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, TableComponent, NavbarComponent],
+  imports: [CommonModule, RouterOutlet, TableComponent, NavbarComponent, LoginComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
