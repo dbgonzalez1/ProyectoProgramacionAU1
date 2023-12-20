@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Proyecto": {
+    "tabla-imagen": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -15,11 +15,11 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/proyecto",
+            "outputPath": "dist/tabla-imagen",
             "index": "src/index.html",
-            "main": "src/main.ts",
+            "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -27,12 +27,9 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              "src/assets/imagen"
-  
+              "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -54,12 +51,9 @@
               "outputHashing": "all"
             },
             "development": {
-              "buildOptimizer": false,
               "optimization": false,
-              "vendorChunk": true,
               "extractLicenses": false,
-              "sourceMap": true,
-              "namedChunks": true
+              "sourceMap": true
             }
           },
           "defaultConfiguration": "production"
@@ -68,10 +62,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Proyecto:build:production"
+              "buildTarget": "tabla-imagen:build:production"
             },
             "development": {
-              "browserTarget": "Proyecto:build:development"
+              "buildTarget": "tabla-imagen:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +73,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Proyecto:build"
+            "buildTarget": "tabla-imagen:build"
           }
         },
         "test": {
@@ -105,6 +99,6 @@
     }
   },
   "cli": {
-    "analytics": "7b79f44a-45cd-4a6c-81cf-8e735ba3d875"
+    "analytics": "733ea42a-0036-43ff-aafe-dab854e38db5"
   }
 }
