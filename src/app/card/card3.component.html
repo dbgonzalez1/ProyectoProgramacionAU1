@@ -1,15 +1,15 @@
-<!--1/5-->
+<!--3/5-->
 <mat-card class="example-card">
   <mat-card-header style="background-color: skyblue;" class="titulo">
     <mat-card-subtitle style="color: black; text-align: center;">
-      <h1><b>  NEGACIÓN DE DATOS (FORMULARIO)</b></h1>
+      <h1><b>  ENVIO DE DATOS</b></h1>
     </mat-card-subtitle>
   </mat-card-header>
   <mat-card-header>
     <mat-card-title>Estimado Jostyn Moreira</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <p>{{ negacionGeneral }}</p>
+    <p>{{ aprobacionGeneral }}</p>
     <p>
       <b>Nombre:</b> Jostyn Moreira <br>
       <b>Número de cédula:</b> 2350081010 <br>
@@ -18,26 +18,14 @@
       <b>Número de teléfono:</b> (593) 992-410-791 <br>
       <b>Correo electrónico:</b> sjsinchiguano@espe.edu.ec <br>
     </p>
-    <p>{{negacionDatos}}</p>
-    <mat-divider></mat-divider>
-    <button mat-raised-button (click)="enviarDatos()" style="background-color: green; color: white;">ENVIAR FORMULARIO NUEVAMENTE</button>
-    <mat-divider></mat-divider>
     <br>
-    <p>{{negacionGeneral2}}</p>
-    <p>
-      ¡Gracias por utilizar nuestra aplicación!
-    </p>
+    <p>{{ingresoInformacion}}</p>
     <p>
       <b> Atentamente, <br>
         Steveen Sinchiguano <br>
         Equipo de Soporte <br> </b>
     </p> <br>
   </mat-card-content>
-  <mat-card-actions style="background-color: skyblue;">
-
-    <button mat-raised-button style="background-color: red; color: white;">CANCELAR</button>
-
-  </mat-card-actions>
   <mat-card-footer>
     <mat-progress-bar mode="indeterminate"></mat-progress-bar>
   </mat-card-footer>
