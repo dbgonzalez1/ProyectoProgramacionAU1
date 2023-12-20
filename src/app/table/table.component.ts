@@ -18,8 +18,8 @@ export interface dataTable{
 }
 
 const data: dataTable[] = [
-  {id:1,nombre: 'Juan', FechaNacimiento: '12/12/12', Telefono: '123456789', Correo: 'juan@espe.edu.ec', Estado:'En Revision'},
-  {id:2,nombre: 'Pedro', FechaNacimiento: '12/12/12', Telefono: '123456789', Correo: 'pedro@espe.edu.ec', Estado:'En Revision'},
+  {id:1,nombre: 'Juan Guanin', FechaNacimiento: '12/12/12', Telefono: '123456789', Correo: 'juan@espe.edu.ec', Estado:'En Revision'},
+  {id:2,nombre: 'Mackensi Guanin', FechaNacimiento: '12/12/12', Telefono: '123456789', Correo: 'pedro@espe.edu.ec', Estado:'En Revision'},
 ];
 @Component({
   selector: 'app-table',

@@ -5,22 +5,29 @@
     <thead class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
     <tr>
       <th scope="col" class="px-6 py-3">
+        <i class="fa-solid fa-signature fa-lg"></i>
         Nombre
       </th>
       <th scope="col" class="px-6 py-3">
+        <i class="fa-solid fa-calendar-days fa-lg"></i>
         Fecha de Nacimiento
       </th>
       <th scope="col" class="px-6 py-3">
+        <i class="fa-solid fa-mobile fa-lg"></i>
         Telefono
       </th>
       <th scope="col" class="px-6 py-3">
+        <i class="fa-solid fa-envelope fa-lg"></i>
         Correo
       </th>
       <th scope="col" class="px-6 py-3">
+        <i class="fa-solid fa-bullseye fa-lg"></i>
         Estado
       </th>
 <th scope="col" class="px-6 py-3">
+  <i class="fa-solid fa-circle-exclamation fa-lg"></i>
        Acciones
+
       </th>
 
 
@@ -31,7 +38,7 @@
 
 @for(data of data; track data.id){
 
-  <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
+  <tr class="bg-white hover:bg-red-500 dark:bg-gray-800 dark:hover:bg-gray-600">
     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
       {{data.nombre}}
     </th>
