@@ -1,3 +1,0 @@
-ng add @ng-bootstrap/ng-bootstrap
-npm install --save @fortawesome/fontawesome-free
-npm install sweetalert2
