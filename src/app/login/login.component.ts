@@ -32,9 +32,9 @@ export class LoginComponent {
   onSubmit() {
     if (this.loginForm.valid) {
       console.log(this.loginForm.value);
-      this.snackBar.open('Inicio de sesion Correcto!', 'Close', { duration: 3000 });
+      this.snackBar.open('Inicio de sesion Correcto!', 'Cerrar', { duration: 3000 });
     }else {
-      this.snackBar.open('Revise su Correo o Contraseña', 'Close', { duration: 3000 });
+      this.snackBar.open('Revise su Correo o Contraseña', 'Cerrar', { duration: 3000 });
     }
   }
 }
