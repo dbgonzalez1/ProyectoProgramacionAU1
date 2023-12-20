@@ -1,32 +1,32 @@
-<!--1/5-->
+<!--5/5-->
 <mat-card class="example-card">
   <mat-card-header style="background-color: skyblue;" class="titulo">
     <mat-card-subtitle style="color: black; text-align: center;">
-      <h1><b>  NEGACIÓN DE DATOS (FORMULARIO)</b></h1>
+      <h1><b>  NEGACIÓN DE DOCUMENTOS</b></h1>
     </mat-card-subtitle>
   </mat-card-header>
   <mat-card-header>
     <mat-card-title>Estimado Jostyn Moreira</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <p>{{ negacionGeneral }}</p>
-    <p>
-      <b>Nombre:</b> Jostyn Moreira <br>
-      <b>Número de cédula:</b> 2350081010 <br>
-      <b>Edad:</b> 23 años <br>
-      <b>Dirección:</b> Sueño de Bolivar <br>
-      <b>Número de teléfono:</b> (593) 992-410-791 <br>
-      <b>Correo electrónico:</b> sjsinchiguano@espe.edu.ec <br>
-    </p>
-    <p>{{negacionDatos}}</p>
+    <p>{{ denegacionDocumentos }}</p>
+
+    <p>{{denegacionDocumentos1}}</p>
+    <p>{{denegacionDocumentos2}}</p>
     <mat-divider></mat-divider>
-    <button mat-raised-button (click)="enviarDatos()" style="background-color: green; color: white;">ENVIAR FORMULARIO NUEVAMENTE</button>
+    <div class="card">
+      <label for="fileAutenticacion">Subir Foto de autenticación (PNG)</label>
+      <input type="file" id="fileAutenticacion" accept=".png" (change)="handleFileChange($event, 'autenticacion')" required>
+    </div>
+<br>
+    <div class="card">
+      <label for="fileHojaVida">Subir Hoja de vida (PDF)</label>
+      <input type="file" id="fileHojaVida" accept=".pdf" (change)="handleFileChange($event, 'hojaVida')" required>
+    </div>
     <mat-divider></mat-divider>
     <br>
-    <p>{{negacionGeneral2}}</p>
-    <p>
-      ¡Gracias por utilizar nuestra aplicación!
-    </p>
+    <p>{{denegacionDocumentos3}}</p>
+
     <p>
       <b> Atentamente, <br>
         Steveen Sinchiguano <br>
