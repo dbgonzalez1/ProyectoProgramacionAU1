@@ -1,0 +1,79 @@
+/* tabla-imagen.component.scss */
+
+.text-center {
+    margin: 2% auto;
+  }
+  
+  .table-container {
+    margin: 6%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #d1ecf1; /* Celeste claro */
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  
+      th, td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #b0c5d9; /* Color de borde más suave */
+        font-size: 16px; /* Tamaño de fuente aumentado */
+        color: #333;
+      }
+  
+      th {
+        background-color: #bee5eb; /* Celeste más claro para encabezados */
+        font-weight: bold;
+        color: #0056b3; /* Azul más oscuro */
+      }
+  
+      tbody tr:hover {
+        background-color: #c1e2f3; /* Cambio de color al pasar el ratón */
+      }
+  
+      tfoot {
+        background-color: #bee5eb;
+      }
+  
+      img {
+        max-width: 50px;
+        border-radius: 50%;
+      }
+  
+      &.table-actions {
+        text-align: center;
+  
+        .btn-accept, .btn-reject {
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 14px;
+          transition: background-color 0.3s ease;
+        }
+  
+        .btn-accept {
+          background-color: #4caf50; /* Verde más suave */
+          color: #fff;
+  
+          &:hover {
+            background-color: #45a049;
+          }
+        }
+  
+        .btn-reject {
+          background-color: #d9534f; /* Rojo más suave */
+          color: #fff;
+  
+          &:hover {
+            background-color: #c9302c;
+          }
+        }
+      }
+    }
+  }
+  
