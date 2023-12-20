@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Respuestas de Jean</h1>
+<div mat-dialog-content>
+  <strong>1.- Describa su experiencia personal con la programación</strong>
+  <P class="text-justify">Desde que era niño me ha gustado la tecnología, y siempre he querido saber como funcionan las cosas, por lo que me gusta mucho la programación, ya que me permite crear cosas que funcionen y que sean útiles para las personas.</P>
+
+<strong>2.- Describa sus areas de conocimiento en programación</strong>
+<P class="text-justify">Me gusta mucho la programación web, ya que es muy útil para crear aplicaciones que se puedan usar en cualquier dispositivo, y también me gusta la programación de aplicaciones móviles, ya que es muy útil para crear aplicaciones que se puedan usar en cualquier dispositivo.</P>
+
+<strong>3.- ¿Cuál es tu nivel de estudios?</strong>
+<P class="text-justify">Estoy cursando el último año de la carrera de Ingeniería en Sistemas Computacionales.</P>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button mat-dialog-close color="warn"(click)="openConfirmationDialog()" ><i class="fa-solid fa-xmark fa-lg mr-0.5"></i>Rechazar </button>
+  <button mat-raised-button mat-dialog-close cdkFocusInitial (click)="openConfirmationDialog()" >Aceptar <i class="fa-solid fa-check fa-lg ml-0.5"></i></button>
+</div>

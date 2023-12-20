@@ -12,10 +12,10 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatCardModule} from '@angular/material/card';
 import { CardComponent } from './card/card.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
-    AppComponent,
     FormularioComponent,
     CardComponent
   ],
@@ -28,7 +28,9 @@ import { CardComponent } from './card/card.component';
     MatProgressBarModule,
     MatButtonModule,
     MatDividerModule,
-    MatCardModule
+    MatCardModule,
+    ReactiveFormsModule,
+    AppComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

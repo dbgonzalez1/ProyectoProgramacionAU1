@@ -1,0 +1,70 @@
+
+<div class="mx-10">
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg mx-6 mr-5 my-4">
+  <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+    <thead class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
+    <tr>
+      <th scope="col" class="px-6 py-3">
+        <i class="fa-solid fa-signature fa-lg"></i>
+        Nombre
+      </th>
+      <th scope="col" class="px-6 py-3">
+        <i class="fa-solid fa-calendar-days fa-lg"></i>
+        Fecha de Nacimiento
+      </th>
+      <th scope="col" class="px-6 py-3">
+        <i class="fa-solid fa-mobile fa-lg"></i>
+        Telefono
+      </th>
+      <th scope="col" class="px-6 py-3">
+        <i class="fa-solid fa-envelope fa-lg"></i>
+        Correo
+      </th>
+      <th scope="col" class="px-6 py-3">
+        <i class="fa-solid fa-bullseye fa-lg"></i>
+        Estado
+      </th>
+<th scope="col" class="px-6 py-3">
+  <i class="fa-solid fa-circle-exclamation fa-lg"></i>
+       Acciones
+
+      </th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+
+
+@for(data of data; track data.id){
+
+  <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+      {{data.nombre}}
+    </th>
+    <td class="px-6 py-4">
+     {{data.FechaNacimiento}}
+    </td>
+    <td class="px-6 py-4">
+      {{data.Telefono}}
+    </td>
+    <td class="px-6 py-4">
+      {{data.Correo}}
+    </td>
+    <td>
+      <mat-chip [color]="data.Estado === 'Aceptado' ? 'primary' : 'warn'" >
+        <i class="fa-regular fa-magnifying-glass fa-lg"></i>
+        {{data.Estado}}
+      </mat-chip>
+
+    </td>
+    <td class="">
+
+      <button mat-raised-button color="primary" (click)="openDialog('0ms', '0ms')"><i class="fa-regular fa-file-circle-question fa-lg mr-0.5"> </i>Ver Respuestas</button>
+    </td>
+  </tr>
+}
+    </tbody>
+  </table>
+</div>
+</div>
