@@ -1,0 +1,51 @@
+<mat-card class="example-card">
+  <mat-card-header style="background-color: skyblue;" class="titulo">
+    <mat-card-subtitle style="color: black; text-align: center;">
+      <h1><b>  CONFIRMACIÓN DE DATOS</b></h1>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-header>
+    <mat-card-title>Estimado Jostyn Moreira</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>{{ longText }}</p>
+    <p>
+      <b>Nombre:</b> Jostyn Moreira <br>
+      <b>Número de cédula:</b> 2350081010 <br>
+      <b>Edad:</b> 23 años <br>
+      <b>Dirección:</b> Sueño de Bolivar <br>
+      <b>Número de teléfono:</b> (593) 992-410-791 <br>
+      <b>Correo electrónico:</b> sjsinchiguano@espe.edu.ec <br>
+    </p>
+    <p>{{shortText}}</p>
+    <mat-divider></mat-divider>
+    <div class="card">
+      <label for="fileAutenticacion">Subir Foto de autenticación (PNG)</label>
+      <input type="file" id="fileAutenticacion" accept=".png" (change)="handleFileChange($event, 'autenticacion')" required>
+    </div>
+<br>
+    <div class="card">
+      <label for="fileHojaVida">Subir Hoja de vida (PDF)</label>
+      <input type="file" id="fileHojaVida" accept=".pdf" (change)="handleFileChange($event, 'hojaVida')" required>
+    </div>
+    <mat-divider></mat-divider>
+    <br>
+    <p>{{infoText}}</p>
+    <p>
+      ¡Gracias por utilizar nuestra aplicación!
+    </p>
+    <p>
+      <b> Atentamente, <br>
+        Steveen Sinchiguano <br>
+        Equipo de Soporte <br> </b>
+    </p> <br>
+  </mat-card-content>
+  <mat-card-actions style="background-color: skyblue;">
+    <button mat-raised-button (click)="enviarDatos()" style="background-color: green; color: white;">ENVIAR</button>
+    <button mat-raised-button style="background-color: red; color: white;">CANCELAR</button>
+
+  </mat-card-actions>
+  <mat-card-footer>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  </mat-card-footer>
+</mat-card>
