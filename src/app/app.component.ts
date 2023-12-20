@@ -1,18 +1,23 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import Swal from 'sweetalert2';
+import {TableComponent} from "./table/table.component";
+import {NavbarComponent} from "./navbar/navbar.component";
+import {initFlowbite} from "flowbite";
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet, TableComponent, NavbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
-  
+export class AppComponent implements OnInit{
+  ngOnInit(): void {
+    initFlowbite();
+  }
   datos = [
     {
       cedula: '1234567890',
@@ -61,14 +66,14 @@ export class AppComponent {
       showCancelButton: true,
       confirmButtonText: 'Sí, aceptar',
       cancelButtonText: 'Cancelar'
-    }).then((result) => {
+    }).then((result: { isConfirmed: any; }) => {
       if (result.isConfirmed) {
         this.aceptar(dato);
         Swal.fire('¡Aceptado!', 'El registro ha sido aceptado.', 'success');
       }
     });
   }
-  
+
   confirmarRechazo(dato: any) {
     Swal.fire({
       title: '¿Estás seguro?',
@@ -77,11 +82,13 @@ export class AppComponent {
       showCancelButton: true,
       confirmButtonText: 'Sí, rechazar',
       cancelButtonText: 'Cancelar'
-    }).then((result) => {
+    }).then((result: { isConfirmed: any; }) => {
       if (result.isConfirmed) {
         this.rechazar(dato);
         Swal.fire('¡Rechazado!', 'El registro ha sido rechazado.', 'error');
       }
     });
   }
+
+
 }
